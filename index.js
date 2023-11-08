@@ -12,7 +12,7 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
 
-  io.mv('src/index.html', 'index.html');
+  io.cp('src/index.html', 'index.html');
 } catch (error) {
   core.setFailed(error.message);
 }
