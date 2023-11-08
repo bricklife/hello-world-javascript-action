@@ -31,6 +31,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Hello world action step
+        id: hello
+        uses: bricklife/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Mona the Octocat'
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
